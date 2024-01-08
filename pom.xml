@@ -3,6 +3,7 @@
   <groupId>Login</groupId>
   <artifactId>login</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
 
 <dependencies>
     <dependency>
@@ -29,5 +30,19 @@
         <version>8.0.23</version>
     </dependency>
 </dependencies>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>3.4.0</version>
+			<configuration>
+				<archive>
+					<addMavenDescriptor>false</addMavenDescriptor>
+				</archive>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
 
 </project>
